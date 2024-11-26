@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #f0f2f5;
+}
+/* Sidebar */
+.sidebar {
+width: 250px;
+background: linear-gradient(135deg, #007bff, #6a1b9a, #000);
+background-size: 400% 400%;
+animation: gradient 6s ease infinite;
+color: white;
+padding: 20px;
+position: fixed;
+top: 0;
+bottom: 0;
+}
+@keyframes gradient {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 15px 0;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* CSS TABEL */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+table th, table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+table th {
+    background: #6a1b9a;
+    color: white;
+}
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+table tr:hover {
+    background-color: #f1f1f1;
+}
+table td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* ELEMEN BUTTON */
+.button{
+    margin-top: 20px;
+}
+
+/* CSS BUTTON */
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.btn a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-edit {
+    background: #007bff;
+    color: white;
+}
+.btn-edit:hover {
+    background: #0056b3;
+}
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+.btn-delete:hover {
+    background: #a71d2a;
+}
+
+/* membuat button tambah */
+.btn-add {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-back {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #797979;
+    color: white;
+}
+
+.btn-back:hover {
+    background: #696969;
+    color: white;
+}
+.btn-add:hover {
+    background: #0056b3;
+    color: white;
+}
+
+/* CSS FORM */
+/* Form Container */
+.form-container form,
+.form-container select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Jarak antar elemen */
+}
+.form-container label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+}
+.form-container .form-group {
+    flex: 1 1 calc(50% - 15px); /* 50% lebar minus gap */
+    min-width: 200px; /* Lebar minimum untuk tampilan kecil */
+}
+.form-container .form-group.full-width {
+    flex: 1 1 100%; /* Elemen dengan lebar penuh */
+}
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="file"]
+{
+    padding: 10px;
+    font-size: 14px;
+    width: 100%; /* Isi penuh elemen */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-container .btn-submit {
+    background: linear-gradient(to right, #6a1b9a, #007bff);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%; /* Lebar penuh */
+    display: block;
+}
+.form-container .btn-submit:hover {
+    background: linear-gradient(to right, #5a1087, #0056b3);
+}
+.form-container .btn-back {
+    margin-top: 10px;
+    background: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%; /* Lebar penuh */
+}
+.form-container .btn-back:hover {
+    background: #bbb;
+}
+
+/* Style untuk label */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style untuk elemen select */
+.select-control {
+    width: 100%; /* Memenuhi lebar container */
+    height: 38px; /* Tinggi yang sama dengan form-control */
+    padding: 6px 12px; /* Padding di dalam elemen */
+    font-size: 14px; /* Ukuran font */
+    line-height: 1.42857143; /* Jarak antar baris */
+    color: #555; /* Warna teks */
+    background-color: #fff; /* Warna latar */
+    background-image: none; /* Hilangkan background default */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 4px; /* Rounded corner */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); /* Inner shadow */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Animasi */
+}
+
+/* Fokus pada elemen select */
+.select-control:focus {
+    border-color: #66afe9; /* Warna border saat fokus */
+    outline: 0; /* Hilangkan outline default */
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* Shadow biru */
+}
+
+/* Placeholder style (untuk opsi kosong) */
+.select-control option[value=""] {
+    color: #888; /* Warna teks placeholder */
+}
+
+/* ALERT */
+/* ================================ */
+/* CSS UNTUK ALERT SUCCESS */
+
+.tampilan-alert{
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+} */
+
