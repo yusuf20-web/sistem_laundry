@@ -45,11 +45,9 @@ if (isset($_POST['simpan'])) {
                     <label for="telepon">Telepon</label>
                     <input type="text" id="telepon" name="telepon" required>
                 </div>
-            </form>
-            <div class="button">
                 <button type="submit" name="simpan" class="btn btn-submit">Simpan</button>
                 <button class="btn btn-back" onclick="history.back()">Kembali</button>
-            </div>
+            </form>                 
         </div>
     </body>
 </html>

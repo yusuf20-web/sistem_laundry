@@ -41,7 +41,6 @@ if (isset($_GET['hapus'])) {
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>Telepon</th>
-                        <th>Nama Paket</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -53,13 +52,12 @@ if (isset($_GET['hapus'])) {
                         <td><?php echo $rowPelanggan['nama_pelanggan']; ?></td>
                         <td><?php echo $rowPelanggan['alamat']; ?></td>
                         <td><?php echo $rowPelanggan['telepon']; ?></td>
-                        <td></td>
                         <td>
                             <!-- Tombol Edit -->
-                            <a class="btn btn-edit" href="edit-pelanggan.php?id=<?php echo $rowpelanggan['id']; ?>">Edit</a>
+                            <a class="btn btn-edit" href="edit-pelanggan.php?id=<?php echo $rowPelanggan['id']; ?>">Edit</a>
 
                             <!-- Tombol Delete -->
-                            <a class="btn btn-delete" href="pelanggan.php?hapus=<?php echo $rowpelanggan['id']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
+                            <a class="btn btn-delete" href="pelanggan.php?hapus=<?php echo $rowPelanggan['id']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
                         </td>
                     </tr>
                 <?php } ?>
